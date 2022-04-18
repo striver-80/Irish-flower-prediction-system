@@ -1,0 +1,37 @@
+
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <body class="output">
+        <center>
+
+            <h1>  PREDICTION :  </h1>
+        
+            {% if predictions == 0 %}
+                <h2>Iris-setosa</h2>
+                <div class="output_image">
+                    <img src="static/image/iris_setosa.jpg" alt="Not found">
+                </div>   
+            {% endif %}
+            
+            {% if predictions == 1 %}
+                <h2>Iris-versicolor</h2>
+                <div class="output_image">
+                    <img src="static/image/iris_versicolor.jpg" alt="Not found">
+                </div> 
+            {% endif %}
+            
+            {% if predictions == 2 %}
+                <h2>Iris-virginica</h2>
+                <div class="output_image">
+                    <img src="static/image/iris_virginica.jpg" alt="Not found">
+                </div> 
+            
+            {% endif %}
+    
+            <br><br>
+        <a href='/'>go back to home page</a>
+    
+        </center>
+    </body>
+</html>

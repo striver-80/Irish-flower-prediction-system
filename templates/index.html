@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title> Homepage </title>
+        <link rel="stylesheet" href="static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li> <a href="{{url_for('home')}}">Home</a></li>
+                        <li> <a href="https://www.linkedin.com/in/kriti30900/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="text-box">
+                <h1>Iris Flowers Classification</h1>
+            </div>
+            <div class="css-typing">
+                <p>"In the Spring a livelier iris changes on the burnish'd dove;</p>
+                <p>In the Spring a young man's fancy lightly turns to thoughts of love."</p>
+                <p> ~ Alfred Lord Tennyson</p>
+            </div>
+        </section>
+
+        <!------ Flower Images-------->
+        <section class="flower_images">
+            <h1>Images of the Iris Flowers</h1>
+            <div class="row">
+                <div class="flower">
+                        <img src="static/image/iris_setosa.jpg" alt="Not found">
+                        <div class="layer">
+                            <h3>Iris Setosa</h3>
+                        </div>
+                </div>
+                
+                <div class="flower">
+                        <img src="static/image/iris_versicolor.jpg" alt="Not found">
+                        <div class="layer">
+                            <h3>Iris versicolor</h3>
+                        </div>
+                </div>
+    
+                <div class="flower">
+                        <img src="static/image/Iris_virginica.jpg" alt="Not found">
+                        <div class="layer">
+                            <h3>Iris Virginica</h3>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!------ Prediction System-------->
+        <section class="prediction">
+            <h1>Prediction System</h1>
+            <h3>Welcome to the iris flower prediction system</h3><br><br><br><br><br><br>
+            
+            <form class="input_form" method="post", action="{{ url_for('predict')}}">
+                <b>
+                    <span style="color: #fff">Sepal length: </span><input style="font-size: 20px" type="number" step=0.01 name="sepal_length" placeholder="Enter the sepal length in cm..">
+                    <br><br><span style="color: #fff">Sepal width: </span><input style="font-size: 20px" type="number" step=0.01 name="sepal_width" placeholder="Enter the sepal width in cm..">
+                    <br><br><span style="color: #fff">Petal length: </span><input style="font-size: 20px" type="number" step=0.01 name="petal_length" placeholder="Enter the petal length in cm..">
+                    <br><br><span style="color: #fff">Petal width: </span><input style="font-size: 20px" type="number" step=0.01 name="petal_width" placeholder="Enter the petal width in cm.."><br><br></b>
+                    <button style="font-size: 20px" type="submit" >Predict</button>
+                    <input style="font-size: 20px" type="reset">
+            </form>
+            <br>
+            <br>
+            
+        </section>
+    </body>
+</html>

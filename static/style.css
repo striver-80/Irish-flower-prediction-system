@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(image/iris_flower.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Roboto Mono', monospace;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #f4d836;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+    font-family: 'WindSong', cursive;
+}
+.css-typing p {
+    color: #fff;
+    font-family: "Courier";
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .css-typing p:nth-child(1) {
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -webkit-animation: type 2s steps(40, end);
+    animation: type 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  .css-typing p:nth-child(2) {
+    width: 100%;
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  .css-typing p:nth-child(3) {
+    width: 100%;
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+    animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes type {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      border: none;
+    }
+  }
+  
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @-webkit-keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      border-color: tranparent;
+ }
+  }
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flower_images{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.flower_images h1{
+    font-size: 62px;
+    font-family: 'WindSong', cursive;
+    color:rgba(24, 48, 145, 0.7);
+}
+.flower{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.flower img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(149, 169, 248, 0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: rgb(3, 41, 12);
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.prediction{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(image/prediction.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+}
+
+.prediction h1{
+  font-size: 50px;
+  color:rgb(255, 255, 255);
+}
+
+.prediction h3{
+  font-size: 25px;
+  font-family: 'Roboto Mono', monospace;
+  color: #fff;
+}
+
+.textbox{
+  font-size: 20px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.output{
+  background-image: linear-gradient(rgba(198, 223, 59, 0.7),rgba(198, 223, 59, 0.7));
+}
+.output h2{
+  font-size: 25px;
+  font-family: 'Roboto Mono', monospace;
+  color: rgb(17, 5, 68);
+}
+.output_image img{
+  width: 300;
+  height: 300;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.input_form{
+  text-align: left;
+}
